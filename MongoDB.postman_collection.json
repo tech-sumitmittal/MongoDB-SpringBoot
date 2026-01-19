@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "c097452a-bfaf-40f0-9b11-f4078ac0f700",
+		"name": "MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43785271",
+		"_collection_link": "https://sumitmittal-7541663.postman.co/workspace/Sumit-Mittal's-Workspace~4b525d04-b28b-4f2a-85d7-aaa41d45e492/collection/43785271-c097452a-bfaf-40f0-9b11-f4078ac0f700?action=share&source=collection_link&creator=43785271"
+	},
+	"item": [
+		{
+			"name": "get all users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"age\": 28,\r\n  \"photo\": {\r\n    \"title\": \"Profile Picture\",\r\n    \"photoBase64\": \"iVBORw0KGgoAAAANSUhEUgAAAAUA...\" \r\n  },\r\n  \"hobbies\": [\"Reading\", \"Gaming\"],\r\n  \"addresses\": [\r\n    {\r\n      \"street\": \"123 Main St\",\r\n      \"city\": \"Toronto\",\r\n      \"state\": \"ON\",\r\n      \"country\": \"Canada\",\r\n      \"zipCode\": \"M1M1M1\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users by Name Starts With",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/name?name=Jo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/696da900c6a479418dc6e731",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"696da900c6a479418dc6e731"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users by Age Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/age?minAge=20&maxAge=35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"age"
+					],
+					"query": [
+						{
+							"key": "minAge",
+							"value": "20"
+						},
+						{
+							"key": "maxAge",
+							"value": "35"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Oldest User by City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/oldestUserByCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"oldestUserByCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Population by City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/populationByCity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"populationByCity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
